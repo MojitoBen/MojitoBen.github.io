@@ -1,7 +1,160 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="utf-8">
+    <title>《Re:0~為了能爆肝玩遊戲的工程師life》</title>
+    <link href="https://ih1.redbubble.net/image.2345847188.2860/st,small,507x507-pad,600x600,f8f8f8.jpg" rel="shortcut icon" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2; /* 背景顏色 */
+            background-image: url("https://blog.twnic.tw/wp-content/uploads/2021/02/1-3%E6%AD%90%E7%9B%9F%E7%9A%84%E5%B9%B3%E8%87%BA%E7%AE%A1%E5%88%B6%E9%87%8E%E5%BF%83%EF%BC%9A%E6%95%B8%E4%BD%8D%E6%9C%8D%E5%8B%99%E6%B3%95%E8%88%87%E6%95%B8%E4%BD%8D%E5%B8%82%E5%A0%B4%E6%B3%95%EF%BC%88%E4%B8%8B%E7%AF%87%EF%BC%89.jpg");
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 1px;
+        }
+
+        .header-bg {
+            background-color: transparent;
+            /* 設置 GIF 圖片的連結作為背景 */
+            background-image: url("https://assets.objkt.media/file/assets-003/QmdGjhmAq3SBcH4ZzmtfHNq5VKYXVkqCCzgA7V9SgJCrVV/artifact");
+            /* 設置背景大小，例如 "cover" 讓圖片覆蓋整個區塊 */
+            background-size: cover;
+            /* 設置背景位置，例如 "center" 讓圖片置中顯示 */
+            background-position: center;
+        }
+        /* 修改選單的樣式，讓各按鈕在水平距離上平均分配到左右兩邊 */
+        ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            justify-content: space-between; /* 新增這一行 */
+        }
+        button {
+            background: none;
+            border: none;
+            color: inherit;
+            font: inherit;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 0;
+            text-decoration: none; /* 在需要的時候顯示下劃線 */
+            display: block; /* 讓按鈕佔據整個 <li> 的空間 */
+            width: 100%; /* 讓按鈕橫向擴展至整個 <li> 的寬度 */
+            text-align: left; /* 讓文字靠左對齊 */
+            font-size: 24px;
+        }
+        /* 使用 <span> 元素擴大按鈕範圍 */
+        button span {
+            display: block;
+            padding: 50px; /* 調整此處的數值來擴大點擊範圍 */
+        }
+        section {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #000000; /* 內容區塊背景顏色 */
+            color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 加入陰影效果 */
+            display: none; /* 初始隱藏內容方框 */
+        }
+        footer {
+            background-color: #05ccfd; /* 頁尾區塊背景顏色 */
+            color: #000000;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+        /* 可自行加入其他區塊樣式，例如個人作品展示的圖片區塊 */
+        .portfolio-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        /* 可自行加入其他樣式，依您的需求調整排版和內容呈現 */
+
+        /* 加入超連結的樣式 */
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function showContent(contentId) {
+            // 隱藏所有的 section 內容方框
+            var sections = document.querySelectorAll("section");
+            sections.forEach(function(section) {
+                section.style.display = "none";
+            });
+
+            // 顯示指定的內容方框
+            var content = document.getElementById(contentId);
+            if (content) {
+                content.style.display = "block";
+            }
+        }
+    </script>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="header-bg">
+        <header>
+            <!-- 新增連結，點擊後顯示對應的內容方框 -->
+            <ul>
+                <li><button onclick="showContent('first-page')"><span>回首頁</span></button></li>
+                <li><button onclick="showContent('personal-info')"><span>個人資訊</span></button></li>
+                <li><button onclick="showContent('portfolio')"><span>作品展示</span></button></li>
+                <li><button onclick="showContent('empty1')"><span>未使用</span></button></li>
+                <li><button onclick="showContent('empty2')"><span>未使用</span></button></li>
+            </ul>
+        </header>
+    </div>
+    <section id="first-page" style="display: block;">
+        <h2>首頁</h2>
+        <!-- 在這裡加入您的個人訊息內容 -->
+        <p>您好，歡迎來到Ben的個人網頁。商業用專案內容會保密，上傳皆為測試用資料。</p>
+        <img alt="歡迎光臨" title="welcome" src="https://wimg.588ku.com/gif620/20/07/23/4b45e5859275e8b98b13bc640729bb34.gif">
+    </section>
+    <section id="personal-info" style="display: none;">
+        <h2>個人訊息</h2>
+        <!-- 在這裡加入您的個人訊息內容 -->
+        <p>社畜</p>
+    </section>
+    <!-- 在這裡加入您的個人作品展示 -->
+    <section id="portfolio" style="display: none;">
+        <h2>個人作品展示</h2>
+        <div>
+            <!--img class="portfolio-image" src="https://pic.616pic.com/ys_b_img/00/03/62/JzmQaZ4DR6.jpg" alt="停車場車輛記數"-->
+            <p>專案：方向記數：<a href="https://github.com/MojitoBen/ACE_0324_/tree/main/Direction_Check" target="_blank">方向記數系統</a></p>
+        </div>
+        <div>
+            <!--img class="portfolio-image" src="您的作品圖片2.jpg" alt="作品2"-->
+            <p>專案：標籤辨識：<a href="https://github.com/MojitoBen/ACE_0324_/tree/main/steel_label" target="_blank">標籤辨識系統</a></p>
+        </div>        
+        <!-- 可根據您的需求增加更多作品展示 -->
+    </section>
+    <section id="empty1" style="display: none;">
+        <h2>還不知道要放啥先空著</h2>
+        <!-- 在這裡加入您的個人訊息內容 -->
+        <p>先空著</p>
+    </section>
+    <section id="empty2" style="display: none;">
+        <h2>還不知道要放啥先空著</h2>
+        <!-- 在這裡加入您的個人訊息內容 -->
+        <p>先空著</p>
+    </section>   
+    <footer>
+        <p>聯絡方式：Line: | email:ben870817@gmail.com</p>
+    </footer>
 </body>
 </html>
