@@ -20,7 +20,7 @@
         .header-bg {
             background-color: #f2f2f2;
             /* 設置 GIF 圖片的連結作為背景 */
-            background-image: url("https://github.com/MojitoBen/MojitoBen.github.io/blob/main/github/giphy.gif?raw=true"); 
+            /*background-image: url("https://github.com/MojitoBen/MojitoBen.github.io/blob/main/github/giphy.gif?raw=true"); */
             /* 設置背景大小，例如 "cover" 讓圖片覆蓋整個區塊 */
             background-size: cover;
             /* 設置背景位置，例如 "center" 讓圖片置中顯示 */
@@ -33,13 +33,13 @@
             list-style-type: none;
             padding: 0;
             justify-content: space-between; /* 新增這一行 */
-            /*background-color: black; /* 將選單背景設置為黑色 */
+            background-color: black; /* 將選單背景設置為黑色 */
         }
         
         button {
             background: none;
             border: none;
-            color: #000000; /* 修改字體顏色為深藍色 (#003366) */
+            color: #003366; /* 修改字體顏色為深藍色 (#003366) */
             font: inherit;
             font-weight: bold;
             cursor: pointer;
@@ -54,6 +54,10 @@
         button span {
             display: block;
             padding: 50px; /* 調整此處的數值來擴大點擊範圍 */
+        }
+        /* 當鼠標移動到按鈕上時，將背景色變成白色 */
+        button:hover {
+            background-color: white;
         }
         section {
             max-width: 800px;
