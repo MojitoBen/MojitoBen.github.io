@@ -59,6 +59,7 @@
         button:hover {
             background-color: white;
         }
+        /* 增加內容區塊的淡入淡出效果 */
         section {
             max-width: 800px;
             margin: 30px auto;
@@ -68,6 +69,13 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 加入陰影效果 */
             display: none; /* 初始隱藏內容方框 */
+            opacity: 0; /* 初始設定透明度為0 */
+            transition: opacity 0.5s ease; /* 設定淡入淡出的動畫效果 */
+        }
+
+        section.active {
+            display: block; /* 顯示內容方框 */
+            opacity: 1; /* 設定顯示時的透明度為1 */
         }
         footer {
             background-color: #000000; /* 頁尾區塊背景顏色 */
@@ -98,18 +106,42 @@
         }
     </style>
     <script>
+        var isAnimating = false; // 判斷是否正在執行淡入淡出的動畫
+
         function showContent(contentId) {
-            // 隱藏所有的 section 內容方框
+            // 如果正在執行淡入淡出動畫，則直接返回，避免重複觸發
+            if (isAnimating) {
+                return;
+            }
+
+            // 取得目標內容方框
+            var targetSection = document.getElementById(contentId);
+
+            // 逐個檢查內容方框
             var sections = document.querySelectorAll("section");
             sections.forEach(function(section) {
-                section.style.display = "none";
+                if (section === targetSection) {
+                    fadeIn(section); // 只對目標內容執行淡入動畫
+                } else {
+                    section.style.display = "none"; // 其他內容隱藏
+                }
             });
+        }
 
-            // 顯示指定的內容方框
-            var content = document.getElementById(contentId);
-            if (content) {
-                content.style.display = "block";
-            }
+        // 淡入效果
+        function fadeIn(element) {
+            element.style.display = "block"; // 顯示元素
+            element.style.opacity = 0; // 設定初始透明度為0
+            isAnimating = true; // 開始執行淡入動畫
+            var op = 0; // 設定初始透明度
+            var timer = setInterval(function () {
+                if (op >= 1) {
+                    clearInterval(timer); // 達到最大透明度後停止計時器
+                    isAnimating = false; // 淡入動畫結束
+                }
+                element.style.opacity = op;
+                op += 0.1; // 透明度每次增加0.1
+            }, 50); // 設定每50毫秒執行一次
         }
     </script>
 </head>
@@ -126,7 +158,7 @@
             </ul>
         </header>
     </div>
-    <section id="first-page" style="display: block;">
+    <section id="first-page" class="active" style="display: block;">
         <h2>首頁</h2>
         <!-- 在這裡加入您的個人訊息內容 -->
         <p>您好，歡迎來到Ben的個人網頁。商業用專案內容會保密，上傳皆為測試用資料。</p>
@@ -134,13 +166,13 @@
             <img alt="歡迎光臨" title="welcome" src="https://github.com/MojitoBen/MojitoBen.github.io/blob/main/github/welcome_gif.gif?raw=true" style="max-width: 100%; height: auto;">
         </div>
     </section>
-    <section id="personal-info" style="display: none;">
+    <section id="personal-info" class="active" style="display: none;">
         <h2>個人訊息</h2>
         <!-- 在這裡加入您的個人訊息內容 -->
         <p>社畜</p>
     </section>
     <!-- 在這裡加入您的個人作品展示 -->
-    <section id="portfolio" style="display: none;">
+    <section id="portfolio" class="active" style="display: none;">
         <h2>個人作品展示</h2>
         <div>
             <!--img class="portfolio-image" src="https://pic.616pic.com/ys_b_img/00/03/62/JzmQaZ4DR6.jpg" alt="停車場車輛記數"-->
@@ -150,22 +182,18 @@
             <!--img class="portfolio-image" src="您的作品圖片2.jpg" alt="作品2"-->
             <p>專案：標籤辨識：<a href="https://github.com/MojitoBen/ACE_0324_/tree/main/steel_label" target="_blank">標籤辨識系統</a></p>
         </div>        
-        <!-- 可根據您的需求增加更多作品展示 -->
     </section>
-    <section id="empty1" style="display: none;">
+    <section id="empty1" class="active" style="display: none;">
         <h2>還不知道要放啥先空著</h2>
-        <!-- 在這裡加入您的個人訊息內容 -->
         <p>先空著</p>
     </section>
-    <section id="empty2" style="display: none;">
+    <section id="empty2" class="active" style="display: none;">
         <h2>還不知道要放啥先空著</h2>
-        <!-- 在這裡加入您的個人訊息內容 -->
         <p>先空著</p>
     </section>   
     <footer>
         <footer>
             <p>聯絡方式：<a href="https://line.me/ti/p/hdcu-VNEJ0" target="_blank">
-                <!-- 調整圖片大小並添加超連結 -->
                 <img src="https://github.com/MojitoBen/MojitoBen.github.io/blob/main/github/line5.png?raw=true" title="加入好友" style="width: 30px; height: 30px;">
             </a> | email:ben870817@gmail.com</p>
         </footer>
