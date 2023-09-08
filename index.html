@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2; /* 背景顏色 */
+            background-color: #f2f2f2; 
             background-image: url("https://github.com/MojitoBen/MojitoBen.github.io/blob/main/github/background_img.jpg?raw=true");
             margin: 0;
             padding: 0;
@@ -19,27 +19,23 @@
 
         .header-bg {
             background-color: #f2f2f2;
-            /* 設置 GIF 圖片的連結作為背景 */
             /*background-image: url("https://github.com/MojitoBen/MojitoBen.github.io/blob/main/github/giphy.gif?raw=true"); */
-            /* 設置背景大小，例如 "cover" 讓圖片覆蓋整個區塊 */
             background-size: cover;
-            /* 設置背景位置，例如 "center" 讓圖片置中顯示 */
             background-position: center;
         }
 
-        /* 修改選單的樣式，讓各按鈕在水平距離上平均分配到左右兩邊 */
         ul {
             display: flex;
             list-style-type: none;
             padding: 0;
-            justify-content: space-between; /* 新增這一行 */
-            background-color: black; /* 將選單背景設置為黑色 */
+            justify-content: space-between;
+            background-color: black; 
         }
         
         button {
             background: none;
             border: none;
-            color: #003366; /* 修改字體顏色為深藍色 (#003366) */
+            color: #003366; 
             font: inherit;
             font-weight: bold;
             cursor: pointer;
@@ -50,10 +46,9 @@
             text-align: left; /* 讓文字靠左對齊 */
             font-size: 24px;
         }
-        /* 使用 <span> 元素擴大按鈕範圍 */
         button span {
             display: block;
-            padding: 50px; /* 調整此處的數值來擴大點擊範圍 */
+            padding: 50px; /* 點擊範圍 */
         }
         /* 當鼠標移動到按鈕上時，將背景色變成白色 */
         button:hover {
@@ -75,7 +70,7 @@
 
         section.active {
             display: block; /* 顯示內容方框 */
-            opacity: 1; /* 設定顯示時的透明度為1 */
+            opacity: 1; /* 透明度 */
         }
         footer {
             background-color: #000000; /* 頁尾區塊背景顏色 */
@@ -87,16 +82,13 @@
             left: 0;
             width: 100%;
         }
-        /* 可自行加入其他區塊樣式，例如個人作品展示的圖片區塊 */
         .portfolio-image {
             max-width: 100%;
             height: auto;
             display: block;
             margin: 20px auto;
         }
-        /* 可自行加入其他樣式，依您的需求調整排版和內容呈現 */
 
-        /* 加入超連結的樣式 */
         a {
             color: #007bff;
             text-decoration: none;
@@ -124,7 +116,6 @@
                 }
             });
         }
-
         // 淡入效果
         function fadeIn(element) {
             element.style.display = "block"; // 顯示元素
@@ -146,10 +137,7 @@
             const formattedTime = now.toLocaleTimeString();
             timeElement.textContent = "現在時間: " + formattedTime;
         }
-        // 每秒更新一次時間
         setInterval(updateTime, 1000);
-
-        // 頁面加載時首次執行更新
         updateTime();
     </script>
 </head>
