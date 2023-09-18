@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2; 
+    background-image: url("https://github.com/MojitoBen/MojitoBen.github.io/blob/main/github/background_img.jpg?raw=true");
+    margin: 0;
+    padding: 0;
+}
+header {
+    text-align: center;
+    padding: 0;
+}
+
+.header-bg {
+    background-color: #f2f2f2;
+    /*background-image: url("https://github.com/MojitoBen/MojitoBen.github.io/blob/main/github/giphy.gif?raw=true"); */
+    background-size: cover;
+    background-position: center;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    justify-content: space-between;
+    background-color: black; 
+}
+
+button {
+    background: none;
+    border: none;
+    color: #003366; 
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none; /* 在需要的時候顯示下劃線 */
+    display: block; /* 讓按鈕佔據整個 <li> 的空間 */
+    width: 100%; /* 讓按鈕橫向擴展至整個 <li> 的寬度 */
+    text-align: left; /* 讓文字靠左對齊 */
+    font-size: 24px;
+}
+button span {
+    display: block;
+    padding: 50px; /* 點擊範圍 */
+}
+/* 當鼠標移動到按鈕上時，將背景色變成白色 */
+button:hover {
+    background-color: white;
+}
+/* 增加內容區塊的淡入淡出效果 */
+section {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #000000; /* 內容區塊背景顏色 */
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 加入陰影效果 */
+    display: none; /* 初始隱藏內容方框 */
+    opacity: 0; /* 初始設定透明度為0 */
+    transition: opacity 0.5s ease; /* 設定淡入淡出的動畫效果 */
+}
+
+section.active {
+    display: block; /* 顯示內容方框 */
+    opacity: 1; /* 透明度 */
+}
+footer {
+    background-color: #000000; /* 頁尾區塊背景顏色 */
+    color: #ffffff;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.portfolio-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
