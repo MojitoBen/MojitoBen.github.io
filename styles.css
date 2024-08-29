@@ -89,3 +89,43 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* 下載資源區域的外框和樣式 */
+.download-section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #007bff; /* 藍色邊框 */
+    border-radius: 8px; /* 圓角邊框 */
+    background-color: #f9f9f9; /* 淺灰色背景 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+}
+
+.download-item {
+    margin: 10px 0; /* 上下間距 */
+    padding: 15px; /* 內部間距 */
+    border: 1px solid #007bff; /* 藍色邊框 */
+    border-radius: 5px; /* 圓角邊框 */
+    background-color: #e7f3ff; /* 淺藍色背景 */
+    transition: background-color 0.3s; /* 背景顏色變化過渡 */
+}
+
+.download-item a {
+    text-decoration: none; /* 去掉下劃線 */
+    color: #007bff; /* 藍色文字 */
+    font-weight: bold; /* 加粗文字 */
+}
+
+.download-item a:hover {
+    text-decoration: underline; /* 滑鼠懸停時顯示下劃線 */
+}
+
+h2 {
+    color: #333; /* 標題顏色 */
+    font-family: 'Arial', sans-serif; /* 字體樣式 */
+}
+
+.portfolio-image {
+    width: 1280px;
+    height: 960px;
+    object-fit: contain; /* 或使用 cover*/
+}
