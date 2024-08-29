@@ -75,12 +75,6 @@ footer {
     left: 0;
     width: 100%;
 }
-.portfolio-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-}
 
 a {
     color: #007bff;
@@ -125,7 +119,7 @@ h2 {
 }
 
 .portfolio-image {
-    width: 1280px;
-    height: 960px;
+    width: 800px;
+    height: auto;
     object-fit: contain; /* 或使用 cover*/
 }
