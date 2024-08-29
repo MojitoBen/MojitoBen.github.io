@@ -75,6 +75,12 @@ footer {
     left: 0;
     width: 100%;
 }
+.portfolio-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
 
 a {
     color: #007bff;
@@ -118,8 +124,8 @@ h2 {
     font-family: 'Arial', sans-serif; /* 字體樣式 */
 }
 
-.portfolio-image {
-    width: 800px;
+.portfolio-image-pillar {
+    width: 600px;
     height: auto;
     object-fit: contain; /* 或使用 cover*/
 }

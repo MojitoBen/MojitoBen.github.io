@@ -21,7 +21,7 @@ function fadeIn(element) {
     element.style.opacity = 0;
     
     var start = null;
-    var duration = 500; // 动画持续时间（毫秒）
+    var duration = 500;
 
     function animate(timestamp) {
         if (!start) start = timestamp;
