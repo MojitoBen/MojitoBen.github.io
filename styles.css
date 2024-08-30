@@ -108,6 +108,7 @@ a:hover {
     background-color: #e7f3ff; /* 淺藍色背景 */
     transition: background-color 0.3s; /* 背景顏色變化過渡 */
     cursor: pointer; /* 整個區塊可點擊，指標變為手指形狀 */
+    color: #333;
 }
 
 .download-item a {
