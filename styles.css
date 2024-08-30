@@ -22,7 +22,7 @@ ul {
     list-style-type: none;
     padding: 0;
     justify-content: space-between;
-    background-color: black; 
+    background-color: black;
 }
 
 button {
@@ -39,11 +39,12 @@ button {
     text-align: left; /* 讓文字靠左對齊 */
     font-size: 24px;
 }
+
 button span {
     display: block;
     padding: 50px; /* 點擊範圍 */
 }
-/* 當鼠標移動到按鈕上時，將背景色變成白色 */
+
 button:hover {
     background-color: white;
 }
@@ -76,7 +77,7 @@ footer {
     width: 100%;
 }
 .portfolio-image {
-    max-width: 100%;
+    max-width: 600px;
     height: auto;
     display: block;
     margin: 20px auto;
@@ -101,31 +102,38 @@ a:hover {
 }
 
 .download-item {
+    display: flex; /* 使用 Flexbox 來排列內容 */
+    padding: 10px; /* 內部間距 */
     margin: 10px 0; /* 上下間距 */
-    padding: 15px; /* 內部間距 */
+    cursor: pointer; /* 整個區塊可點擊，指標變為手指形狀 */
+    text-decoration: none; /* 去掉下劃線 */
+}
+
+.download-link, .download-description {
+    width: 48%; /* 每個區塊佔一半的寬度 */
+    box-sizing: border-box; /* 包含邊框和內邊距 */
+    padding: 10px; /* 內部間距 */
     border: 1px solid #007bff; /* 藍色邊框 */
     border-radius: 5px; /* 圓角邊框 */
     background-color: #e7f3ff; /* 淺藍色背景 */
-    transition: background-color 0.3s; /* 背景顏色變化過渡 */
-    cursor: pointer; /* 整個區塊可點擊，指標變為手指形狀 */
-    color: #333;
 }
 
-.download-item a {
-    text-decoration: none; /* 去掉下劃線 */
+.download-link {
     color: #007bff; /* 藍色文字 */
     font-weight: bold; /* 加粗文字 */
 }
 
-.download-item a:hover {
-    text-decoration: underline; /* 滑鼠懸停時顯示下劃線 */
+.download-description {
+    color: #000000;
+    text-align: left; /* 左對齊 */
 }
 
 h2 {
-    color: #FFB6C1; /* 標題顏色 */
+    color: #FFB6C1; /* 標題顏色改成櫻花色 /
     font-family: 'Arial', sans-serif; /* 字體樣式 */
 }
 
+/* 智慧立柱的展示圖大小 */
 .portfolio-image-pillar {
     width: 600px;
     height: auto;
