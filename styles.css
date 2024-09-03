@@ -48,6 +48,7 @@ button span {
 button:hover {
     background-color: white;
 }
+
 /* 增加內容區塊的淡入淡出效果 */
 section {
     max-width: 800px;
@@ -138,4 +139,29 @@ h2 {
     width: 600px;
     height: auto;
     object-fit: contain; /* 或使用 cover*/
+}
+/* 返回頂部按鈕 */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background-color: #FFB6C1;
+    color: white;
+    border: none;
+    border-radius: 50%; /* 使按鈕圓形 */
+    width: 50px; 
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: none; /* 初始隱藏 */
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+#backToTop:hover {
+    background-color: white; 
+    transform: scale(1.2);
 }

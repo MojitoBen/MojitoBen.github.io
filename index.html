@@ -93,5 +93,25 @@
             </addr>
         </footer>
     </footer>
+    <button id="backToTop" style="display: none;">⬆️</button>
+    <script>
+        // back to top 按鈕
+        const backToTopButton = document.getElementById("backToTop");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        backToTopButton.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
 </body>
 </html>
