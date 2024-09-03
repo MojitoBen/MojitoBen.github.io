@@ -146,22 +146,23 @@ h2 {
     bottom: 20px;
     right: 20px;
     z-index: 100;
-    background-color: #FFB6C1;
+    background-color:  #FFB6C1;
     color: white;
     border: none;
-    border-radius: 50%; /* 使按鈕圓形 */
-    width: 50px; 
-    height: 50px;
-    font-size: 24px;
+    border-radius: 5px; 
+    padding: 0; 
+    width: auto; 
+    height: auto; 
+    font-size: 36px; 
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
     display: none; /* 初始隱藏 */
-    display: flex;
-    align-items: center; 
+    display: flex; 
     justify-content: center; 
+    align-items: center; 
 }
 
 #backToTop:hover {
     background-color: white; 
-    transform: scale(1.2);
+    transform: scale(1.3); 
 }
