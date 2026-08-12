@@ -1,117 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ben 的個人網站：軟體工程師的個人介紹與 AI / 電腦視覺作品展示">
+    <meta name="theme-color" content="#7a1230">
     <title>《Re:0~為了能爆肝玩遊戲的工程師life》</title>
-    <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <link href="https://github.com/MojitoBen/MojitoBen.github.io/blob/main/github/shark_icon.jpg?raw=true" rel="shortcut icon" type="image/x-icon">
+    <link href="github/shark_icon.jpg" rel="shortcut icon" type="image/x-icon">
 </head>
 <body>
-    <div class="header-bg">
-        <header>
-            <!-- 新增連結，點擊後顯示對應的內容方框 -->
-            <ul>
-                <li><button onclick="showContent('first-page')"><span>回首頁</span></button></li>
-                <li><button onclick="showContent('personal-info')"><span>個人資訊</span></button></li>
-                <li><button onclick="showContent('portfolio')"><span>作品展示</span></button></li>
-                <li><button onclick="showContent('download-resources')"><span>下載資源</span></button></li>
-                <li><button onclick="showContent('empty2')"><span>未使用</span></button></li>
-            </ul>
-        </header>
+    <div class="petals" aria-hidden="true">
+        <span class="petal"></span>
+        <span class="petal"></span>
+        <span class="petal"></span>
+        <span class="petal"></span>
+        <span class="petal"></span>
+        <span class="petal"></span>
     </div>
-    <section id="first-page" class="active" style="display: block;">
-        <h2>首頁</h2>
-        <p>您好，歡迎來到Ben的個人網頁。</p>
-        <div style="text-align: center;">
-            <img alt="歡迎光臨" title="welcome" src="https://github.com/MojitoBen/MojitoBen.github.io/raw/main/github/miko.gif" style="width: 400px;height: auto;">
+
+    <nav class="nav">
+        <div class="brand">
+            <img src="github/shark_icon.jpg" alt="" class="brand-icon">
+            <span class="brand-name">⛩️ Ben's Lab</span>
         </div>
-    </section>
-    <section id="personal-info" class="active" style="display: none;">
-        <h2>個人訊息</h2>
-        <p>💡我是一位軟體工程師，專注於軟體開發和設計演算法。</p>
-        <p>📚興趣是遊戲開發和AI相關研究，了解新技術的背後原理與執行邏輯。</p>
-        <p>🆚熟悉的技術包括 JAVA、C# 和 Python。</p>
-        <p>🚗當我不工作時，我喜歡玩電腦遊戲、偶爾出門逛個街、參加活動(例如音樂祭)。</p>
-        <p>📨如果你想要聯絡我，可以通過以下方式：</p>
-        <ul>
-            <li style="font-weight: bold;">⬇️⬇️⬇️頁面底部聯絡方式⬇️⬇️⬇️</li>
-            <!--<li>LinkedIn: <a href="https://www.linkedin.com/in/yourname" target="_blank">個人 LinkedIn 頁面</a></li>-->
-            <li>GitHub: <a href="https://github.com/MojitoBen" target="_blank">GitHub 帳號</a></li>
+        <button class="nav-toggle" id="navToggle" aria-label="開啟選單" aria-expanded="false" aria-controls="navMenu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul id="navMenu">
+            <li><button type="button" data-target="first-page">回首頁</button></li>
+            <li><button type="button" data-target="personal-info">個人資訊</button></li>
+            <li><button type="button" data-target="portfolio">作品展示</button></li>
         </ul>
-    </section>
-    
-    <section id="portfolio" class="active" style="display: none;">
-        <h2>個人作品展示</h2>
-        <p>商業用專案內容會保密，上傳皆為測試用資料。</p>
-        <p>2023年辨識相關案子</p>
-        <div class="project-asc">
-            <!--img class="portfolio-image" src="https://pic.616pic.com/ys_b_img/00/03/62/JzmQaZ4DR6.jpg" alt="停車場車輛記數"-->
-            <p>專案：方向記數：<a href="https://github.com/MojitoBen/ACE_0324_/tree/main/Direction_Check" target="_blank">方向記數系統</a></p>
-        </div>
-        <div class="project-asc">
-            <!--img class="portfolio-image" src="您的作品圖片2.jpg" alt="作品2"-->
-            <p>專案：標籤辨識：<a href="https://github.com/MojitoBen/ACE_0324_/tree/main/steel_label" target="_blank">標籤辨識系統</a></p>
-        </div>   
-        <div class="project-asc">
-            <!--img class="portfolio-image" src="您的作品圖片3.jpg" alt="作品3"-->
-            <p>專案：噴字辨識：<a href="https://github.com/MojitoBen/ACE_0324_/tree/main/steel_paint" target="_blank">噴字辨識系統</a></p>
-        </div>
-        <p>2024年AI相關案子</p>
-        <div class="project-yunning">
-            <p>專案：智慧立柱：<a href="https://github.com/MojitoBen/CarPlateRecognition/tree/main/pillar" target="_blank">智慧立柱系統</a></p>
-            <img class="portfolio-image-pillar" src="https://github.com/MojitoBen/MojitoBen.github.io/raw/main/github/pillar_working.png" alt="pillar_working">
-        </div> 
-    </section>
-    <section id="download-resources" class="active" style="display: none;">
-        <h2>下載資源</h2>
-        <div class="download-section">
-            <a href="https://docs.ultralytics.com/models/yolov8/#performance-metrics" target="_blank" class="download-item">
-                <div class="download-link">YOLOv8 Detection(COCO)</div>
-                <div class="download-description">- yolov8的coco模型載點</div>
-            </a>
-            <a href="https://docs.ultralytics.com/models/sam-2/#how-to-use-sam-2-versatility-in-image-and-video-segmentation" target="_blank" class="download-item">
-                <div class="download-link">SAM 2</div>
-                <div class="download-description">- Segment Anything Model 2 模型載點</div>
-            </a>
-            <a href="link_to_your_resource" target="_blank" class="download-item">
-                <div class="download-link">...</div>
-                <div class="download-description">- ...</div>
-            </a>
-            <!-- 可以根據需要添加更多下載項目 -->
-        </div>
-    </section>
-    <section id="empty2" class="active" style="display: none;">
-        <h2>還不知道要放啥先空著</h2>
-        <p>先空著</p>
-    </section>   
+    </nav>
+
+    <main>
+        <section id="first-page" class="active">
+            <h2>🌸 首頁</h2>
+            <p>您好，歡迎來到 Ben 的個人網頁。</p>
+            <div class="hero-image">
+                <img alt="歡迎光臨" title="welcome" src="github/miko.gif">
+            </div>
+        </section>
+
+        <section id="personal-info">
+            <h2>👤 個人訊息</h2>
+            <ul class="info-list">
+                <li><span class="info-icon">💡</span>我是一位軟體工程師，專注於軟體開發和設計演算法。</li>
+                <li><span class="info-icon">📚</span>興趣是遊戲開發和 AI 相關研究，了解新技術的背後原理與執行邏輯。</li>
+                <li><span class="info-icon">🆚</span>熟悉的技術包括 JAVA、C# 和 Python。</li>
+                <li><span class="info-icon">🚗</span>當我不工作時，我喜歡玩電腦遊戲、偶爾出門逛個街、參加活動（例如音樂祭）。</li>
+            </ul>
+            <p class="contact-hint">📨 如果你想要聯絡我，可以透過頁面底部的聯絡方式，或是：</p>
+            <ul class="info-list">
+                <li><span class="info-icon">🐙</span>GitHub：<a href="https://github.com/MojitoBen" target="_blank" rel="noopener">MojitoBen</a></li>
+            </ul>
+        </section>
+
+        <section id="portfolio">
+            <h2>🎨 個人作品展示</h2>
+            <p>商業用專案內容會保密，上傳皆為測試用資料。</p>
+
+            <div class="project-group">
+                <h3 class="project-group-title">2023　辨識相關案子</h3>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-icon">🎯</div>
+                        <h4>方向記數系統</h4>
+                        <p class="project-tag">辨識・電腦視覺</p>
+                        <a href="https://github.com/MojitoBen/ACE_0324_/tree/main/Direction_Check" target="_blank" rel="noopener" class="project-link">查看專案 →</a>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-icon">🏷️</div>
+                        <h4>標籤辨識系統</h4>
+                        <p class="project-tag">辨識・電腦視覺</p>
+                        <a href="https://github.com/MojitoBen/ACE_0324_/tree/main/steel_label" target="_blank" rel="noopener" class="project-link">查看專案 →</a>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-icon">🖌️</div>
+                        <h4>噴字辨識系統</h4>
+                        <p class="project-tag">辨識・電腦視覺</p>
+                        <a href="https://github.com/MojitoBen/ACE_0324_/tree/main/steel_paint" target="_blank" rel="noopener" class="project-link">查看專案 →</a>
+                    </article>
+                </div>
+            </div>
+
+            <div class="project-group">
+                <h3 class="project-group-title">2024　AI 相關案子</h3>
+                <div class="project-grid">
+                    <article class="project-card project-card--featured">
+                        <img class="project-thumb" src="github/pillar_working.png" alt="智慧立柱運作畫面">
+                        <h4>智慧立柱系統</h4>
+                        <p class="project-tag">AI・車牌辨識</p>
+                        <a href="https://github.com/MojitoBen/CarPlateRecognition/tree/main/pillar" target="_blank" rel="noopener" class="project-link">查看專案 →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
     <footer>
-        <footer>
-            <addr>聯絡方式：<a href="https://line.me/ti/p/hdcu-VNEJ0" target="_blank">
-            <img src="https://github.com/MojitoBen/MojitoBen.github.io/blob/main/github/line5.png?raw=true" title="加入好友" style="width: 30px; height: 30px;">
-            </a> | email:andygaryben@gmail.com | <b id="time"></b>
-            </addr>
-        </footer>
+        <addr>
+            聯絡方式：
+            <a href="https://line.me/ti/p/hdcu-VNEJ0" target="_blank" rel="noopener" class="line-link">
+                <img src="github/line5.png" title="加入好友" alt="LINE 加入好友">
+            </a>
+            ｜email：<a href="mailto:andygaryben@gmail.com">andygaryben@gmail.com</a>
+            ｜<b id="time"></b>
+        </addr>
     </footer>
-    <button id="backToTop" style="display: none;">⬆️</button>
-    <script>
-        // back to top 按鈕
-        const backToTopButton = document.getElementById("backToTop");
 
-        window.onscroll = function() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                backToTopButton.style.display = "block";
-            } else {
-                backToTopButton.style.display = "none";
-            }
-        };
+    <button id="backToTop" aria-label="回到頂部">⬆️</button>
 
-        backToTopButton.onclick = function() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        };
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
